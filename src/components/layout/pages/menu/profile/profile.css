@@ -61,6 +61,15 @@ p.nothingToShow {
 } 
 
 @media (max-width: 1000px) {
+  #profile{
+    margin: auto;
+    justify-content: center;
+  }
+
+  .profile__titleContainer {
+    justify-content: center;
+  }
+  
   .profile__playerInfoContainer, .profile__gameStatisticsContainer {
     flex: 1 1 100%;
     height: auto;

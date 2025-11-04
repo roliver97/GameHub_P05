@@ -101,3 +101,10 @@ flex-direction: column;
 .recentGameScoreDiv span {
   color: var(--rtc-color-6);
 }
+
+@media (max-width: 1000px) {
+  #dashboard{
+    margin: auto;
+    justify-content: center;
+  }
+}

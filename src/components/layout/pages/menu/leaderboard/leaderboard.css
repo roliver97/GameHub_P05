@@ -6,7 +6,6 @@
 
 .leaderboard__titleContainer {
   gap: var(--rtc-gap-m);
-  font-size: 2rem;
   justify-content: start;
 }
 
@@ -129,11 +128,14 @@
 
 
 @media (max-width: 1000px) {
-
-  .leaderboard__resultsContainer {
-    align-self: center;
-    width: 90%;
+  #leaderboard {
+    margin: auto;
+    justify-content: center;
   }
+  .leaderboard__titleContainer {
+    justify-content: center;
+  }
+
   .leaderboard__resultsContainer-resultContainer {
     flex-direction: row;
     gap: var(--rtc-gap-m);
