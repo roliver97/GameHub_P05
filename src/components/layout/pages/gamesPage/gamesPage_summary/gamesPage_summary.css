@@ -1,0 +1,74 @@
+.gameContainer > .gameSummaryContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--rtc-gap-m);
+  padding: 0;
+}
+
+.gameSummaryContainer .resultLabel {
+  font-size: 0.8rem;
+  color: var(--rtc-color-4);
+  text-align: center;
+}
+
+.gameSummaryContainer .resultValue {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.resultValue_x-wins, .resultValue_moves {
+  color: rgb(87, 140, 255);
+}
+
+.resultValue_draws {
+  color: rgb(255, 224, 87);
+}
+
+.resultValue_o-wins {
+  color: rgb(255, 87, 87);
+}
+
+.resultValue_matches {
+  color: rgb(91, 192, 82);
+}
+
+.resultValue_time {
+  color: var(--rtc-color-8);
+}
+
+.resultValue_bestTime, .resultValue_bestStreak {
+  color: var(--rtc-color-6);
+}
+
+.gameSummaryDiv {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--rtc-padding-xs);
+  background-color: var(--rtc-color-3);
+  border: 2px solid var(--rtc-color-4);
+  border-radius: var(--rtc-border-radius);
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+ .gameContainer > .gameSummaryContainer {
+  gap: 0;
+  flex-wrap: wrap;
+  border: 2px solid var(--rtc-color-4);
+  border-radius: var(--rtc-border-radius);
+  background-color: var(--rtc-color-3);
+ }
+
+ .gameSummaryDiv {
+
+  border: none;
+  border-radius: var(--rtc-border-radius);
+}
+} 

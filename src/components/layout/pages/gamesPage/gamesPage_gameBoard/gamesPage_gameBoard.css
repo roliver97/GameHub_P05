@@ -1,0 +1,8 @@
+.gameContainer > .gameBoardContainer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--rtc-color-3);
+  border: 2px solid var(--rtc-color-4);
+  border-radius: var(--rtc-border-radius);
+  padding: var(--rtc-padding-m) var(--rtc-padding-3xl);
+}

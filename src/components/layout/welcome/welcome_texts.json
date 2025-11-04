@@ -1,0 +1,11 @@
+{
+  "welcomePage": {
+    "logo": "GameHub",
+    "title": "Play Amazing Classic Games",
+    "subtitle": "Challenge yourself with our collection of classic games — compete for the highest scores!",
+    "label": "Enter Your Player Name",
+    "inputPlaceholder": "Your gaming name...",
+    "submitButton": "Start Gaming"
+  }
+
+}

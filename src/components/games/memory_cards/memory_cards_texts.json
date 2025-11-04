@@ -1,0 +1,12 @@
+{
+  "cards": [
+    {"id": "memory_card1", "cardNumber": 1, "name": "pizza", "icon": "icons/memory/memory_cards/pizza_card.png"},
+    {"id": "memory_card2", "cardNumber": 2, "name": "rollercoaster", "icon": "icons/memory/memory_cards/rollerCoaster_card.png"},
+    {"id": "memory_card3",  "cardNumber": 3, "name": "taxi", "icon": "icons/memory/memory_cards/taxi_card.png"},
+    {"id": "memory_card4",  "cardNumber": 4, "name": "trophy", "icon": "icons/memory/memory_cards/trophy_card.png"},
+    {"id": "memory_card5",  "cardNumber": 5, "name": "cat", "icon": "icons/memory/memory_cards/cat_card.png"},
+    {"id": "memory_card6",  "cardNumber": 6, "name": "mountain", "icon": "icons/memory/memory_cards/mountain_card.png"},
+    {"id": "memory_card7",  "cardNumber": 7, "name": "ocean", "icon": "icons/memory/memory_cards/ocean_card.png"},
+    {"id": "memory_card8",  "cardNumber": 8, "name": "party", "icon": "icons/memory/memory_cards/party_card.png"}
+  ]
+}

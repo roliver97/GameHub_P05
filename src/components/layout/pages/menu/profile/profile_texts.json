@@ -1,0 +1,13 @@
+{
+  "playerInfo": {
+    "title": "Player Info",
+    "playerName_subtitle": "Player Name",
+    "memberSince_subtitle": "Member Since",
+    "favoriteGame_subtitle": "Favorite Game"},
+
+  "gameStatistics": {
+    "title": "Game Statistics",
+    "gamesPlayed_subtitle": "Games Played",
+    "totalScore_subtitle": "Total Score",
+    "averageScore_subtitle": "Average Score"}
+}

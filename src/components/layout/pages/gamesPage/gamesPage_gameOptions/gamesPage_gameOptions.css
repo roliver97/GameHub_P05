@@ -1,0 +1,27 @@
+.gameContainer > .gameOptionsContainer{
+  display: flex;
+  justify-content: center;
+  gap: var(--rtc-gap-m);
+  padding: 0;
+}
+
+.gameOptionsContainer .optionButton {
+  background-color: var(--rtc-color-2);
+  padding: var(--rtc-padding-xs) var(--rtc-padding-m);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer
+}
+
+.gameOptionsContainer .optionButton:hover {
+  background-color: var(--rtc-color-5);
+}
+
+.gameOptionsContainer .newGame {
+  background-color: var(--rtc-color-3);
+  font-weight: 600;
+}
+
+.gameOptionsContainer .newGame:hover {
+  background-color: var(--rtc-color-7);
+}

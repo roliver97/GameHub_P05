@@ -1,0 +1,26 @@
+{
+  "logoContainer": {
+    "title": "GameHub",
+    "text": "Welcome, ",
+    "span": "{playerName}"
+  },
+   
+  "gamesDiv": {
+    "title": "Games",
+    "games": [
+    {"name": "Tic Tac Toe", "icon": "icons/tic_tac_toe/tic_tac_toe.svg"},
+    {"name": "Memory Cards", "icon": "icons/memory/memory.png"},
+    {"name": "Rock Paper Scissors", "icon": "icons/rock_paper_scissors/rock_paper_scissors.png"}
+  ]
+  },
+
+  "menuDiv": {
+    "title": "Menu",
+    "options": [
+      {"name": "Dashboard", "icon": "icons/dashboard/home.png"},
+      {"name": "Leaderboard", "icon": "icons/leaderboard/trophy.webp"},
+      {"name": "Profile", "icon": "icons/profile/profile.webp"}
+    ]
+  }
+
+}

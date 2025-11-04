@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ROOT */
+
+:root {
+  /* FONT FAMILY */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* BRANDING COLORS */
+  --rtc-color-1: #ffffff;
+  --rtc-color-2: oklch(0.21 0.04 265.77);
+  --rtc-color-3: oklch(.279 .041 260.031);
+  --rtc-color-4: oklch(69.882% 0.04244 260.141);
+  --rtc-color-5: oklch(49.721% 0.05656 260.683);
+  --rtc-color-6: #ff9500;
+  --rtc-color-7: oklch(52.623% 0.28507 293.509);
+  --rtc-color-8: oklch(62.318% 0.2404 301.216);
+
+  /* TEXT COLORS */
+  --rtc-textColor: var(--rtc-color-1);
+  --rtc-textColorInverted: var(--rtc-color-2);
+  --rtc-textColorHighlight: var(--rtc-color-6);
+  --rtc-textColorHighlightInverted: var(--rtc-color-7);
+
+  /* BACKGROUND COLORS */
+  --rtc-bgColor: var(--rtc-color-2);
+  --rtc-bgColorInverted: var(--rtc-color-1);
+  --rtc-bgColorHighlight: var(--rtc-color-7);
+  --rtc-bgColorHighlightInverted: var(--rtc-color-6);
+  
+  /* HIGHLIGHT COLORS */
+  --rtc-highlightColor: var(--rtc-color-6);
+
+  /* BORDER RADIUS */
+  --rtc-border-radius: 20px;
+
+  /* SPACINGS */
+  --rtc-margin-xs: 10px;
+  --rtc-margin-s: 20px;
+  --rtc-margin-m: 30px;
+  --rtc-margin-l: 40px;
+  --rtc-margin-xl: 50px;
+  --rtc-margin-xxl: 75px;
+  --rtc-margin-3xl: 100px;
+
+  --rtc-padding-xs: 10px;
+  --rtc-padding-s: 20px;
+  --rtc-padding-m: 30px;
+  --rtc-padding-l: 40px;
+  --rtc-padding-xl: 50px;
+  --rtc-padding-xxl: 75px;
+  --rtc-padding-3xl: 100px;
+
+  --rtc-gap-xs: 10px;
+  --rtc-gap-s: 20px;
+  --rtc-gap-m: 30px;
+  --rtc-gap-l: 40px;
+  --rtc-gap-xl: 50px;
+  --rtc-gap-xxl: 75px;
+  --rtc-gap-3xl: 100px;
+}
+
+/* CONFIGURACIONES GENERALES*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px; /* 1rem = 14px */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--rtc-bgColor);
+  color: var(--rtc-textColor);
+  display: flex;
+}
+
+p, label, button, a {
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: 1.5rem;
+} 
+
+h2 {
+  font-size: 1.2rem;
+} 
+
+h3 { 
+  font-size: 1.1rem;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+}
+
+
+p,
+label,
+button,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--rtc-textColor);
+}
+
+ul,
+ol,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Mobile: pantalles fins a 768px */
+@media (max-width: 1000px) {
+  html {
+    font-size: 12px; /* 1rem = 14px */
+  }
+}
+
+a:hover {
+  color: var(--rtc-textColorHighlight);
+}
+
+.component {
+  padding: var(--rtc-padding-m) var(--rtc-gap-xl);
+}
+
+.section {
+  padding: var(--rtc-gap-xl);
+  width: 100%;
+  min-height: 100svh;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+

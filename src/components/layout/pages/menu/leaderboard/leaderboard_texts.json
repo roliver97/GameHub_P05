@@ -1,0 +1,7 @@
+{
+  "leaderboard": {
+    "title": "Leaderboard",
+    "icon": "icons/leaderboard/trophy.webp",
+    "resultsBoard": {"title": "Top Scores"}
+  }
+}

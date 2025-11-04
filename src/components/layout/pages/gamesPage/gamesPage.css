@@ -1,0 +1,20 @@
+#gamesPage {
+  justify-content: center;
+  padding: var(--rtc-padding-s);
+  
+}
+
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rtc-gap-s);
+  max-width: 80%;
+  
+}
+
+
+
+
+
+
+

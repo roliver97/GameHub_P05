@@ -1,0 +1,68 @@
+#profile {
+  flex-direction: column;
+  gap: var(--rtc-gap-m);
+}
+
+.profile__titleContainer {
+  gap: var(--rtc-gap-m);
+  font-size: 2rem;
+  justify-content: start;
+}
+
+.profile__titleContainer img {
+ width: 40px
+}
+
+.profile__resultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rtc-gap-m);
+}
+
+.profile__playerInfoContainer, .profile__gameStatisticsContainer {
+  background-color: var(--rtc-color-3);
+  height: 100%;
+  padding: var(--rtc-padding-s);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rtc-gap-m);
+  flex: 1 1 calc(50% - 50px);
+  border: 2px solid var(--rtc-color-4);
+  font-weight: 700;
+  border-radius: var(--rtc-border-radius);
+  align-items: start;
+  justify-content: start;
+}
+
+.profile__playerInfoContainer h2, .profile__gameStatisticsContainer h2 {
+  font-size: 1.3rem;
+}
+
+.profile__playerInfoContainer h4, .profile__gameStatisticsContainer h4 {
+  font-weight: 400;
+  color: var(--rtc-color-4);
+  font-size: 0.9rem;
+}
+
+p.nothingToShow {
+  font-weight: 400;
+  color: var(--rtc-color-1);
+}
+
+.profile__playerInfoContainer div {
+  line-height: var(--rtc-gap-m);
+
+}
+
+.profile__gameStatisticsContainer div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+} 
+
+@media (max-width: 1000px) {
+  .profile__playerInfoContainer, .profile__gameStatisticsContainer {
+    flex: 1 1 100%;
+    height: auto;
+  }
+}

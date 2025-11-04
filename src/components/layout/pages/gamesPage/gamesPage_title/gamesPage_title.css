@@ -1,0 +1,16 @@
+.gameTitleContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--rtc-gap-xs);
+}
+
+.gameTitleDiv {
+  display: flex;
+  gap: var(--rtc-gap-m);
+  font-size: 1.6rem;
+}
+
+.gameTitleContainer img {
+  width: 30px;
+}

@@ -1,0 +1,54 @@
+.memoryCardsBoard {
+  display: grid;
+  grid-template-columns: repeat(4,  1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: var(--rtc-gap-m);
+  place-items: center; 
+}
+
+.cardButton {
+  width: 75px;
+  height: 100px;
+  background-color: var(--rtc-color-5);
+  border: 2px solid var(--rtc-color-4);
+  transition: transform 0.3s ease, border-color 0.8s ease;
+}
+
+.cardButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.cardSelected {
+  transform: scale(1.1);
+}
+
+.cardFounded {
+  transform: scale(1.1);
+  border-color: rgb(91, 192, 82);;
+}
+
+.cardDefaultIcon, .cardIcon{
+  width: 70%;
+}
+
+.actionPromptStarted {
+  color: rgb(78, 158, 233);
+}
+
+.actionPromptWin {
+  color: rgb(91, 192, 82);
+}
+
+
+@media (max-width: 650px) {
+  .memoryCardsBoard{
+    gap: var(--rtc-gap-xs);
+  }
+  
+  .cardButton {
+    width: 50px;
+    height: 75px;
+  }
+} 

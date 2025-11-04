@@ -1,0 +1,131 @@
+.welcomePage {
+  position: relative;
+  background-image: url("/images/welcome_wallpaper.jpeg"); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+
+  background-color: var(--rtc-bgColor);
+  width: 100svw;
+  height: 100dvh;
+  overflow: hidden;
+  flex-direction: column;
+  gap: var(--rtc-gap-m);
+  padding: var(--rtc-padding-l);
+}
+
+.welcomePage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--rtc-bgColor);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.welcomePage > * {
+  position: relative;
+  z-index: 1;
+}
+
+.welcomePage img {
+  width: 200px;
+}
+
+.welcomePage h1 {
+  font-size: 3rem;
+}
+
+.welcomePage h2 {
+  font-size: 1.8rem;
+}
+
+.welcomePage h2 {
+  font-size: 1.8rem;
+  animation: neonBlink 1.2s infinite alternate;
+}
+
+@keyframes neonBlink {
+  from {
+    opacity: 0.8;
+    color: var(--rtc-color-3);
+  }
+  to {
+    opacity: 1;
+    color: var(--rtc-color-6);
+  }
+}
+
+.welcomePage p {
+  font-size: 1.2rem;
+}
+
+.welcomePage__formDiv {
+  display: flex;
+  gap: var(--rtc-gap-m);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: var(--rtc-padding-l) var(--rtc-padding-xs);
+  background-color: var(--rtc-color-3);
+  border-radius: var(--rtc-border-radius);
+}
+
+.welcomePage__formDiv label {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--rtc-color-1);
+}
+
+.welcomePage__formDiv input {
+  padding: 10px var(--rtc-padding-s);
+  border-radius: var(--rtc-border-radius);
+}
+
+.welcomePage__formDiv input:focus{
+  border: 2px solid var(--rtc-color-4);
+  outline: none;  
+}
+
+ .welcomePage__formDiv button {
+  padding: 9px var(--rtc-padding-s);
+  background-color: var(--rtc-bgColor);
+  border: 2px solid var(--rtc-color-3);
+  border-radius: var(--rtc-border-radius);
+  font-size: 0.9rem;
+ }
+
+  .welcomePage__formDiv button:hover {
+    border: 2px solid var(--rtc-color-4);
+    cursor: pointer;
+  }
+
+  .welcomePage__formDiv button:active {
+    border: 2px solid var(--rtc-color-6);
+    color: var(--rtc-color-6);
+  }
+ 
+@media (max-width: 650px) {
+  .welcomePage {
+    gap: var(--rtc-gap-s);
+  }
+
+  .welcomePage img {
+    width: 150px;
+  }
+
+  .welcomePage h1 {
+    font-size: 2rem;
+  }
+
+  .welcomePage h2 {
+    font-size: 1.4rem;
+  }
+
+  .welcomePage p {
+    font-size: 1rem;
+  }
+}

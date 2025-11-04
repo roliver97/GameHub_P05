@@ -1,0 +1,13 @@
+{
+  "dashboard": {
+    "initTitle": "Welcome, ",
+    "title": "Welcome back, ",
+    "icon": "icons/logo.svg",
+    "subtitle": "Ready to play some games?",
+    "resultsBoard": [
+      {"description": "Games Played", "icon": "icons/dashboard/controller.webp"},
+      {"description": "Total Score", "icon": "icons/dashboard/trophy.webp"},
+      {"description": "Recent Games"}
+    ]
+  }
+}

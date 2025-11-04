@@ -1,0 +1,103 @@
+
+#dashboard{
+  flex-direction: column;
+  gap: var(--rtc-gap-xl);
+}
+
+.dashboard__textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--rtc-gap-s);
+  font-size: 2rem;
+}
+
+.dashboard__textContainer-span {
+  color: var(--rtc-color-6);
+}
+
+.dashboard__resultsContainer {
+  display: flex;
+  gap: var(--rtc-gap-xl);
+  flex-wrap: wrap;
+}
+
+.dashboard__resultsContainer h2{
+  font-size: 1.1rem;
+}
+
+.dashboard__resultsContainer-div {
+  background-color: var(--rtc-color-3);
+  padding: var(--rtc-padding-s);
+  display: flex;
+  gap: var(--rtc-gap-m);
+  flex: 1 1 calc(50% - 50px);
+  border: 2px solid var(--rtc-color-4);
+  font-weight: 600;
+  border-radius: var(--rtc-border-radius);
+  justify-content: start;
+}
+
+.dashboard__resultsContainer-div > div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: var(--rtc-gap-s);
+}
+
+
+.dashboard__resultsContainer img {
+  width: 75px;
+  background-color: var(--rtc-color-2);
+  padding: 15px;
+  border-radius: var(--rtc-border-radius);
+}
+
+.recentGamesResultsContainer {
+display: flex;
+flex-direction: column;
+}
+
+.recentGameContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--rtc-padding-s) 0;
+  border-bottom: 2px solid var(--rtc-color-5);
+}
+
+.recentGameContainer:last-child {
+  border-bottom: none;
+}
+
+.recentGameContentDiv {
+  display: flex;
+  align-items: center;
+  gap: var(--rtc-gap-m);
+}
+
+.recentGameIconDiv {
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--rtc-color-5);
+}
+
+.recentGameIconDiv img {
+  width: 65px;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.recentGameTextDiv {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rtc-gap-xs);
+}
+
+.recentGameTextDiv p {
+  color: var(--rtc-color-4);
+}
+
+.recentGameScoreDiv span {
+  color: var(--rtc-color-6);
+}

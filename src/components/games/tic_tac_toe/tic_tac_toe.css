@@ -1,0 +1,38 @@
+.ticTacToeBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--rtc-gap-m);
+  place-items: center; 
+}
+
+
+.ticTacToeCell {
+  width: 75px;
+  height: 75px;
+  background-color: var(--rtc-color-5);
+  border: 2px solid var(--rtc-color-4);
+}
+
+.ticTacToeCell:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--rtc-color-4);
+  border: 2px solid var(--rtc-color-5);
+  cursor: pointer;
+}
+
+.winnerLabel {
+color: rgb(91, 192, 82);
+}
+
+.drawLabel {
+   color: rgb(255, 224, 87);
+}
+
+@media (max-width: 1000px) {
+  .ticTacToeCell {
+  width: 50px;
+  height: 50px;
+  }
+}

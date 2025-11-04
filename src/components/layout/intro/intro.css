@@ -1,0 +1,26 @@
+.introPage {
+  background-color: var(--rtc-bgColor);
+  width: 100svw;
+  height: 100dvh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.introLogo {
+  animation: neonBlink 0.4s infinite alternate;
+}
+
+@keyframes neonBlink {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px){
+  .introLogo {
+    width: 150px;
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "tic-tac-toe": {
+    "titleContainer": {
+      "gameTitle": "Tic Tac Toe",
+      "gameIcon": "icons/tic_tac_toe/tic_tac_toe.svg",
+      "gameSubtitle": "Classic 3x3 grid game"
+  },
+    
+    "gameSummary": {
+      "x-wins": "X Wins",
+      "draws": "Draws",
+      "o-wins": "O Wins"
+    },
+    
+    "currentPlayer": "X",
+    
+    "game": "tic-tac-toe",
+
+    "gameOptions": {
+      "newGame": "New Game",
+      "resetStats": "Reset Stats"
+    },
+
+    "howToPlay":{
+       "instructions": {
+        "instruction-1": "Players take turns placing X and O on the 3x3 grid",
+        "instruction-2": "First player to get 3 in a row (horizontal, vertical, or diagonal) wins",
+        "instruction-3": "If all squares are filled with no winner, it's a draw",
+        "instruction-4": "Win = 100 points, Draw = 50 points"
+    }
+  }
+},
+
+  "rock-paper-scissors": {
+    "titleContainer": {
+      "gameTitle": "Rock Paper Scissors",
+      "gameIcon": "icons/rock_paper_scissors/rock_paper_scissors.png",
+      "gameSubtitle": "Find all matching pairs of cards"
+  },
+    
+    "gameSummary": {
+      "x-wins": "You",
+      "draws": "Draws",
+      "o-wins": "Computer",
+      "currentStreak": "Current Streak Wins",
+      "bestStreak": "Best Streak Wins"
+    },
+    
+    "actionPrompt": "x",
+
+    "game": "rock-paper-scissors",
+
+    "gameOptions": {
+      "newGame": "New Game"
+    },
+
+    "howToPlay":{
+       "instructions": {
+        "instruction-1": "Rock crushes Scissors",
+        "instruction-2": "Scissors cuts Paper",
+        "instruction-3": "Paper covers Rock",
+        "instruction-4": "Choose single round for quick games or best-of series for longer matches",
+        "instruction-5": "Build win streaks to improve your stats!"
+    }
+  }
+  },
+
+  "memory-cards": {
+    "titleContainer": {
+      "gameTitle": "Memory Cards",
+      "gameIcon": "icons/memory/memory.png",
+      "gameSubtitle": "Find all matching pairs of cards"
+  },
+    
+    "gameSummary": {
+      "moves": "Moves",
+      "matches": "Matches",
+      "time": "Time",
+      "bestTime": "Best Time"
+    },
+    
+    "actionPrompt": "a",
+    
+    "game": "memory-cards",
+
+    "gameOptions": {
+      "newGame": "New Game"
+    },
+
+    "howToPlay":{
+       "instructions": {
+        "instruction-1": "Click on cards to flip them over and reveal the emoji",
+        "instruction-2": "Find pairs of matching emojis",
+        "instruction-3": "You can only flip 2 cards at a time",
+        "instruction-4": "Complete the game by matching all pairs",
+        "instruction-5": "Score is based on moves and time - fewer is better!"
+    }
+  }
+  }
+
+
+}

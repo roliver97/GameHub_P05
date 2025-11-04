@@ -1,0 +1,12 @@
+.gameActionPromptContainer{
+  text-align: center;
+  background-color: var(--rtc-color-3);
+  border: 2px solid var(--rtc-color-4);
+  border-radius: var(--rtc-border-radius);
+  padding: var(--rtc-padding-s);
+}
+
+.gameActionPromptContainer p{
+  font-weight: 700;
+  font-size: 1.2rem;
+}

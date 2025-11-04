@@ -1,0 +1,16 @@
+.gameInstructionsContainer {
+  background-color: var(--rtc-color-3);
+  border: 2px solid var(--rtc-color-4);
+  border-radius: var(--rtc-border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rtc-gap-s);
+  padding: var(--rtc-padding-s);
+}
+
+.gameInstructionsContainer ul{
+  display: flex;
+  flex-direction: column;
+  gap: var(--rtc-gap-xs);
+  list-style: circle inside;
+}
