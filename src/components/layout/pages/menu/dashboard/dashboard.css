@@ -107,4 +107,8 @@ flex-direction: column;
     margin: auto;
     justify-content: center;
   }
+
+  .dashboard__textContainer {
+    align-items: center;
+  }
 }

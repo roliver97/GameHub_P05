@@ -32,6 +32,7 @@
   align-items: center;
   border-radius: var(--rtc-border-radius);
   color: var(--rtc-color-4);
+  text-align: center;
 }
 
 .leaderboard__resultsContainer-resultContainer:last-child{
