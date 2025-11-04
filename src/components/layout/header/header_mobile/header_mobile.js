@@ -22,9 +22,9 @@
       header.classList.toggle("header_closed");
       headerMobileOverlay.classList.toggle("hidden");
       if (header.classList.contains("header_closed")) {
-        hamburger_img.src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.svg";
+        hamburger_img.src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.png";
       } else {
-        hamburger_img.src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_left.svg";
+        hamburger_img.src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_left.png";
       }
         const allSections = document.querySelectorAll("section");
         if (!headerContainer.classList.contains("hidden")) {
@@ -48,12 +48,12 @@
     if (window.innerWidth < 1000) {
       headerContainer.classList.add("hidden");
       header.classList.add("header_closed");
-      hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.svg";
+      hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.png";
       hamburger_button.classList.remove("hidden");
       headerContainer.classList.remove("mobile");
     } else {
       header.classList.remove("header_closed");
-      hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_left.svg";
+      hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_left.png";
       headerContainer.classList.remove("hidden", "mobile");
       hamburger_button.classList.add("hidden");
     }
@@ -69,7 +69,7 @@
         if (window.innerWidth < 1000) {
           headerContainer.classList.add("hidden");
           header.classList.add("header_closed");
-          hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.svg";
+          hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.png";
         }
       });
     });
@@ -87,7 +87,7 @@
         headerContainer.classList.add("hidden");
         headerMobileOverlay.classList.add("hidden");
         header.classList.add("header_closed");
-        hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.svg";
+        hamburger_button.querySelector("img").src = import.meta.env.BASE_URL + "icons/header/hamburger_orange_right.png";
         allSections.forEach(s => s.classList.remove("blurred"))
       }
     });

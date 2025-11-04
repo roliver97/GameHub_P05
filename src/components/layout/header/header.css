@@ -135,6 +135,7 @@ header {
   will-change: filter;
 }
 
+
 .headerContainer.mobile {
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
@@ -161,12 +162,10 @@ header {
 
 .header_closed #hamburger_button {
   background-color:var(--rtc-color-2);
-  position: fixed;
-  top: 50%;
 }
 
 .header_closed {
-  position: relative;
+  position: fixed;
   min-height: 100svh;
 }
 
