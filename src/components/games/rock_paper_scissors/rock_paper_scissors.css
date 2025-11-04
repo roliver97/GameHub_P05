@@ -33,6 +33,18 @@
   font-size: 1.2rem;
 }
 
+.resultText_draw {
+ color: rgb(255, 224, 87);
+}
+
+.resultText_win {
+  color: rgb(91, 192, 82);
+}
+
+.resultText_lose {
+  color: rgb(255, 87, 87);
+}
+
 .rockPaperScissors_ResultBoard .result {
   gap: var(--rtc-gap-s);
   font-size: 1.2rem;

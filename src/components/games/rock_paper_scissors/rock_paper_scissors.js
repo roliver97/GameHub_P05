@@ -97,22 +97,28 @@ export function initGame(gameBoard) {
         resultBoard.querySelector(".compChoice h4").textContent = "Computer";
         resultBoard.querySelector(".compChoice p").textContent = compChoice.charAt(0).toUpperCase() + compChoice.slice(1);;
 
+      const resultText = resultBoard.querySelector(".result h4");
+      resultText.classList.remove("resultText_draw", "resultText_win", "resultText_lose");
+      
       if (winner === "draw") {
-        resultBoard.querySelector(".result h4").textContent = "It's a Draw!";
+        resultText.textContent = "It's a Draw!";
+        resultText.classList.add("resultText_draw");
         resultBoard.querySelector(".result img").src = iconMap.draw;
         gameActive = false;
         updateTempData("rock-paper-scissors", { winner: "draw" });
         updatePlayerData("rock-paper-scissors", {result:"draw"});
         updateUI("rock-paper-scissors");
         } else if (winner === "user") {
-          resultBoard.querySelector(".result h4").textContent = "You Win!";
+          resultText.textContent = "You Win!";
+          resultText.classList.add("resultText_win");
           resultBoard.querySelector(".result img").src = iconMap.win;
           gameActive = false;
           updateTempData("rock-paper-scissors", { winner: "user" });
           updatePlayerData("rock-paper-scissors", {result:"win"})
           updateUI("rock-paper-scissors");
           } else{
-            resultBoard.querySelector(".result h4").textContent = "You Lose!";
+            resultText.textContent = "You Lose!";
+            resultText.classList.add("resultText_lose");
             resultBoard.querySelector(".result img").src = iconMap.lose;
             gameActive = false;
             updateTempData("rock-paper-scissors", { winner: "comp" });
