@@ -40,12 +40,11 @@ const gameOptionsContainer = document.createElement("div");
       });
     }else if (selectedGame === "rock-paper-scissors") {
       button.addEventListener("click", () => {
-        const gameBoard = document.querySelector(".rockPaperScissorsBoard");
-
         if (key === "newGame") {
-          const newBoard = gameModules[selectedGame].templateGame();
-          gameBoard.replaceWith(newBoard);
-          gameModules[selectedGame].initGame(newBoard);
+          const gameContainer = document.querySelector(".gameContainer");
+          const newGameContainer = printGames(selectedGame);
+          gameContainer.replaceWith(newGameContainer);
+          resetTempData(selectedGame);
         }
       });
     } else if (selectedGame === "memory-cards") {

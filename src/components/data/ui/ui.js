@@ -15,6 +15,7 @@ export function updateUI(selectedGame) {
   updateGamesUI(selectedGame, gameData, playerData)
   // MENU
   updateMenuUI(playerData);
+
 }
 
 function updateGamesUI(selectedGame, gameData, playerData) {

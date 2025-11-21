@@ -68,6 +68,11 @@ export function welcomeEventListeners(welcomePage) {
     printPages(playerData);
     
     showSection("dashboard");
+  });
     
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      button.click();
+    }
   });
 }

@@ -51,7 +51,7 @@
     "game": "rock-paper-scissors",
 
     "gameOptions": {
-      "newGame": "New Game"
+      "newGame": "Reset Stats"
     },
 
     "howToPlay":{

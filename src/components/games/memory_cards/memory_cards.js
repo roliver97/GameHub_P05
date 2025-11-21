@@ -114,7 +114,7 @@ export function initGame(gameBoard) {
               });
               selectedCards = [];
               gameActive = true;
-            }, 2000);
+            }, 500);
           }
 
           if(foundedCards.length === cards.length) {
@@ -130,8 +130,11 @@ export function initGame(gameBoard) {
 }
 
 export function shuffleCards(cards) {
-  cards.sort(() => Math.random() - 0.5);
-  return cards
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1)); 
+    [cards[i], cards[j]] = [cards[j], cards[i]]; // swap
+  }
+  return cards;
 }
 
 export function compareCards(selectedCards) {

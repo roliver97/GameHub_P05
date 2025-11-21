@@ -47,14 +47,10 @@ export const templateGame = () => {
     text.textContent = opt.name;
     cell.append(img, text);
 
-    cell.addEventListener("click", () => {
-      initGame(board)
-    });
-
     selectionBoard.append(cell);
   });
 
-  board.append(resultBoard, selectionBoard)
+  board.append(resultBoard, selectionBoard);
   return board;
 }
 
@@ -73,8 +69,6 @@ export function initGame(gameBoard) {
 
       updateTempData("rock-paper-scissors", {userChoice: userChoice, compChoice: compChoice});
 
-      const winner = checkWinner(userChoice, compChoice);
-
       const iconMap = {
         rock: "icons/rock_paper_scissors/rock.png",
         paper: "icons/rock_paper_scissors/paper.png",
@@ -84,47 +78,59 @@ export function initGame(gameBoard) {
         draw: "icons/rock_paper_scissors/draw_icon.webp"
       };
       
-        resultBoard.classList.remove("hidden");
-        resultBoard.classList.add("rockPaperScissors_ResultBoard");
+      resultBoard.classList.remove("hidden");
+      resultBoard.classList.add("rockPaperScissors_ResultBoard");
+        
+      const resultText = resultBoard.querySelector(".result h4");
+      resultText.classList.remove("resultText_draw", "resultText_win", "resultText_lose");
 
+      resultText.textContent = "Thinking...";
+      resultBoard.querySelector(".result img").src = "icons/loading_animation.webp";
+      gameActive = false;
+      resultBoard.querySelector(".result h2").textContent = "";
+        resultBoard.querySelector(".userChoice img").src = "";
+        resultBoard.querySelector(".userChoice img").alt = "";
+        resultBoard.querySelector(".userChoice h4").textContent = "";
+        resultBoard.querySelector(".userChoice p").textContent = "";
+
+        resultBoard.querySelector(".compChoice img").src = "";
+        resultBoard.querySelector(".compChoice img").alt = "";
+        resultBoard.querySelector(".compChoice h4").textContent = "";
+        resultBoard.querySelector(".compChoice p").textContent = "";
+      
+      setTimeout(() => {
+        resultBoard.querySelector(".result h2").textContent = "VS";
         resultBoard.querySelector(".userChoice img").src = iconMap[userChoice];
         resultBoard.querySelector(".userChoice h4").textContent = "You";
         resultBoard.querySelector(".userChoice p").textContent = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);;
 
-        resultBoard.querySelector(".result h2").textContent = "VS";
-
         resultBoard.querySelector(".compChoice img").src = iconMap[compChoice];
         resultBoard.querySelector(".compChoice h4").textContent = "Computer";
-        resultBoard.querySelector(".compChoice p").textContent = compChoice.charAt(0).toUpperCase() + compChoice.slice(1);;
+        resultBoard.querySelector(".compChoice p").textContent = compChoice.charAt(0).toUpperCase() + compChoice.slice(1);
+        
+        const winner = checkWinner(userChoice, compChoice);
+        if (winner === "draw") {
+          resultText.textContent = "It's a Draw!";
+          resultText.classList.remove("resultText_win", "resultText_lose");
+          resultText.classList.add("resultText_draw");
+          resultBoard.querySelector(".result img").src = iconMap.draw;
+          } else if (winner === "user") {
+            resultText.textContent = "You Win!";
+            resultText.classList.remove("resultText_draw", "resultText_lose");
+            resultText.classList.add("resultText_win");
+            resultBoard.querySelector(".result img").src = iconMap.win;
+            } else {
+              resultText.textContent = "You Lose!";
+              resultText.classList.remove("resultText_draw", "resultText_win");
+              resultText.classList.add("resultText_lose");
+              resultBoard.querySelector(".result img").src = iconMap.lose;
 
-      const resultText = resultBoard.querySelector(".result h4");
-      resultText.classList.remove("resultText_draw", "resultText_win", "resultText_lose");
-      
-      if (winner === "draw") {
-        resultText.textContent = "It's a Draw!";
-        resultText.classList.add("resultText_draw");
-        resultBoard.querySelector(".result img").src = iconMap.draw;
-        gameActive = false;
-        updateTempData("rock-paper-scissors", { winner: "draw" });
-        updatePlayerData("rock-paper-scissors", {result:"draw"});
-        updateUI("rock-paper-scissors");
-        } else if (winner === "user") {
-          resultText.textContent = "You Win!";
-          resultText.classList.add("resultText_win");
-          resultBoard.querySelector(".result img").src = iconMap.win;
-          gameActive = false;
-          updateTempData("rock-paper-scissors", { winner: "user" });
-          updatePlayerData("rock-paper-scissors", {result:"win"})
-          updateUI("rock-paper-scissors");
-          } else{
-            resultText.textContent = "You Lose!";
-            resultText.classList.add("resultText_lose");
-            resultBoard.querySelector(".result img").src = iconMap.lose;
-            gameActive = false;
-            updateTempData("rock-paper-scissors", { winner: "comp" });
-            updatePlayerData("rock-paper-scissors", {result:"lose"})
-            updateUI("rock-paper-scissors");
-            }
+              }
+      updateTempData("rock-paper-scissors", { winner });
+      updatePlayerData("rock-paper-scissors", { result: winner === "user" ? "win" : winner === "comp" ? "lose" : "draw" });
+      updateUI("rock-paper-scissors");
+      gameActive = true;
+      }, 1000);
     })
   });
 }
@@ -137,7 +143,6 @@ function checkWinner(userChoice, compChoice) {
     (userChoice === "scissors" && compChoice === "paper")
   ) {
     return "user";
-  } else {
-    return "comp";
   }
+  return "comp";
 }
